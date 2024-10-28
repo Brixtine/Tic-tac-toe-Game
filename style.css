@@ -1,32 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
     background-color: white;
-    height: 100%;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
 }
 #game {
     font-size: 20px;
-    padding: 1px;
-    border-color: black;
+    padding: 10px;
     background-color: lightblue;
-    max-width: 100%;
     text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
 }
-
+#board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#space {
+    display: flex;
+    justify-content: center; 
+    margin: 10px 0; 
+}
 .left, .center, .right {
     font-size: 30px;
-    border-color: black;
     border-radius: 15%;
     width: 100px;
-    background-color: lightblue;
-    text-align: center;
-    margin-left: 50px;
     height: 100px;
-    border-width: 0;
+    background-color: lightblue;
+    border: none; 
+    margin: 0 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
-
-#space {
-    margin: 20px 30% auto 30%;
-    display: flex;
+.left:hover, .center:hover, .right:hover {
+    background-color: deepskyblue;
+}
+.left:active, .center:active, .right:active {
+    background-color: dodgerblue; 
 }
