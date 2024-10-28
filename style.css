@@ -1,0 +1,32 @@
+body {
+    max-width: 100%;
+    background-color: white;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+#game {
+    font-size: 20px;
+    padding: 1px;
+    border-color: black;
+    background-color: lightblue;
+    max-width: 100%;
+    text-align: center;
+}
+
+.left, .center, .right {
+    font-size: 30px;
+    border-color: black;
+    border-radius: 15%;
+    width: 100px;
+    background-color: lightblue;
+    text-align: center;
+    margin-left: 50px;
+    height: 100px;
+    border-width: 0;
+}
+
+#space {
+    margin: 20px 30% auto 30%;
+    display: flex;
+}
