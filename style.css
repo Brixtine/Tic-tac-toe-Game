@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     justify-content: center; 
     margin: 10px 0; 
 }
-.left, .center, .right {
+.tile {
     font-size: 30px;
     border-radius: 15%;
     width: 100px;
@@ -43,9 +43,9 @@ body {
     cursor: pointer; 
     transition: background-color 0.3s; 
 }
-.left:hover, .center:hover, .right:hover {
+.tile:hover {
     background-color: deepskyblue;
 }
-.left:active, .center:active, .right:active {
+.tile:active {
     background-color: dodgerblue; 
 }
