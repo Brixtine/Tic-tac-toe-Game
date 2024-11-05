@@ -1,5 +1,7 @@
 var counter = 0;
 var symbol = 'X';
+let scoreX = 0;
+let scoreO = 0;
 var board = [
     ['7', '8', '9'],
     ['4', '5', '6'],
@@ -40,6 +42,7 @@ function updateBoard(choice) {
         case '9': board[0][2] = symbol; break;
     }
 }
+
 
 function gameOver() {
     
@@ -86,7 +89,17 @@ function resetGame() {
 }
 
 function setWinner(winSymbol) {
-    let message = (symbol === 'O') ? "Congratulations! Player O has won the game" : "Congratulations! Player X has won the game";
+    let message = "";
+    if(winSymbol === 'X'){
+        scoreX++;
+        document.getElementById("scoreX").innerText = scoreX;
+        message = "Congratulations! Player X has won the game";
+    } else if(symbol === 'O') {
+        scoreO++;
+        document.getElementById("scoreO").innerText = scoreO;
+        message = "Congratulations! Player O has won the game";
+    }
+
     if (confirm(`${message}\nDo you want to play again?`)) {
         resetGame(); 
     } else {
